@@ -1,0 +1,186 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    height: 90px;
+    background-color: whitesmoke;
+    color: #000;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -1px -1px 5px black;
+    z-index: 1;
+}
+
+header h1{
+    white-space: nowrap;
+    font-size: 35px;
+    font-weight: 900;
+    margin-left: 10vw;
+}
+
+#login{
+    background-color: rgb(240,238,241);
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: 100;
+    border-radius: 6px;
+    margin-right: 10vw;
+    white-space: nowrap;
+}
+
+#login a:any-link{
+    text-decoration: none;
+    color: black;
+}
+
+#login a:hover{
+    color: rgb(103, 103, 215);
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240,238,241);
+}
+
+#textanimation{
+    position: absolute;
+    padding: 0.5rem;
+    left: 40%;
+    transform: translateX(-50%);
+    top: -60px;
+    white-space: nowrap;
+    animation: greeting 0.5s ease-in-out 1s forwards;
+}
+#textanimation h2{
+    font-size: 1.5vw;
+}
+@keyframes greeting {
+    0%{
+        top: 0;
+        transform: scale(0);
+    }
+    80%{
+        top: 15px;
+        transform: scale(1.2);
+
+    }
+    100%{
+        top: 10px;
+        transform: scale(1);
+    }
+}
+
+#btn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 13%;
+    font-size: 17px;
+    font-weight:bolder;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    background-color: rgba(240, 238, 241, 0);
+    border-radius: 5px;
+    border: 0px solid black;
+    box-shadow: 0.3px 0.3px 2px black;
+    white-space: nowrap;
+    
+}
+
+#btn:hover{
+    background-color: rgb(229, 228, 230);
+}
+
+footer{
+    position: sticky;
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px black;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: normal;
+    gap: 5px;
+}
+.ri-github-fill{
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ri-github-fill:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 370px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 19px;
+    background-color: rgb(94, 76, 104);
+}
+
+fieldset h2{
+    font-size: 20px;
+}
+
+input{
+    width: 225px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#submit{
+    width: 225px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgb(100, 161, 98);
+}
+
+#checkbox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#checkbox input{
+    width: 16px;
+    height: 16px;
+    margin-left: 15px;
+}
+
+input::placeholder{
+    font-size: 16px;
+}

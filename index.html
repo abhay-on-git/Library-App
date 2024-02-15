@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📒Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><i class="ri-book-fill"></i> library</h1>
+        <div id="login"><a href="login">Log in</a></div>
+    </header>
+    <main>
+        <div id="textanimation"><h2>
+            👋 Add Some Books !
+        </h2></div>
+        <button id="btn">+ Click to Add </button>
+        <form id="myform" style="display: none;" >
+            <fieldset>
+                <h2>Add New Book</h2>
+            <label for="tittle"><input type="text" placeholder="Book Name" name="bookname"></label>
+            <label for="author"><input type="text" placeholder="Author" name="author"></label>
+            <label for="pages"><input type="number" placeholder="Pages" name="pages"></label>
+            <label id="checkbox" for="checkbox"><input type="checkbox" name="checkbox">Have you read it ?</label>
+             <button id="submit" type="submit">Submit</button>
+        </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; <p id="currYear"></p> Abhay <h2><i class="ri-github-fill"></i></h2></p>
+    </footer> 
+
+    <div class="showbooks">
+        
+    </div>
+
+    <!-- <script type="module">
+        import { getDatabase, ref, set ,push } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyDmzphXBbz7lqxlvmZnv7Rs7QgOD_uXGx8",
+          authDomain: "library-a6e4f.firebaseapp.com",
+          databaseURL: "https://library-a6e4f-default-rtdb.firebaseio.com",
+          projectId: "library-a6e4f",
+          storageBucket: "library-a6e4f.appspot.com",
+          messagingSenderId: "648666452613",
+          appId: "1:648666452613:web:dcf95e0192c9c8d2eb8fec",
+          measurementId: "G-WNNCTDW4RK"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        var database = getDatabase(app);
+        const analytics = getAnalytics(app);
+        
+
+        window.app = app;
+        window.database = database;
+        
+      </script> -->
+      <script src="card.js"></script>
+</body>
+</html>
