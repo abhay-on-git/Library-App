@@ -1,5 +1,5 @@
 const f = document.querySelector("form");
-const showbooks = document.querySelector(".showbooks")
+const showCards = document.querySelector(".showCards")
 const books = []
 
 f.addEventListener("submit", (e) =>{
@@ -8,30 +8,34 @@ f.addEventListener("submit", (e) =>{
     const author = e.target.author.value
     const pages = e.target.pages.value
     const checkbox = e.target.checkbox.checked
-    const book = {bookname,author, pages,checkbox}
+    const bookData = {bookname,author, pages,checkbox}
 
     if(!bookname.trim() || !author.trim() || !pages.trim() ){
             return alert("makade poora form fill kr")
     }
 
 
-    books.push(book)
+    books.push(bookData)
     displayBooks(books)
-    e.target.bookname.value = ""
-    e.target.author.value = ""
-    e.target.pages.value = ""
-    e.target.checkbox.checked = false
+    e.target.reset();
 
 })
 
 function displayBooks(books){
-    showbooks.innerHTML = books.map((b,i) => {
-        return `<div>
-        <h1>${b.bookname}</h1>
-        <p>${b.author}</p>
-        <p>${b.pages}</p>
-        <p>${b.checkbox ? "Read" : "not read"}</p>
-        </div>`
+    books.map((b,i) => {
+
+        document.getElementById("bookName").innerHTML = b.bookname;
+        document.getElementById("author").innerHTML = b.author;
+        document.getElementById("pages").innerHTML = b.pages;
+        document.getElementById("read").innerHTML = b.checkbox ? "Read" : "not Read";
+        return showCards
+        
+        // return `<div>
+        // <h1>${b.bookname}</h1>
+        // <p>${b.author}</p>
+        // <p>${b.pages}</p>
+        // <p>${b.checkbox ? "Read" : "not read"}</p>
+        // </div>`
     })
     console.log(books)
     

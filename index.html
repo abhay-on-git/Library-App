@@ -14,9 +14,20 @@
         <div id="login"><a href="login">Log in</a></div>
     </header>
     <main>
+        <div class="showCards">
+            <h2>Book</h2>
+            <div class="input" id="bookName"></div>
+            <div class="input" id="author"></div>
+            <div class="input" id="pages"></div>
+            <div class="input" id="read"></div>
+            <div class="input" id="remove">
+                <h4>Remove</h4>
+            </div>
+          </div>
         <div id="textanimation"><h2>
             👋 Add Some Books !
-        </h2></div>
+        </h2>
+    </div>
         <button id="btn">+ Click to Add </button>
         <form id="myform" style="display: none;" >
             <fieldset>
@@ -32,36 +43,6 @@
     <footer>
         <p>Copyright &copy; <p id="currYear"></p> Abhay <h2><i class="ri-github-fill"></i></h2></p>
     </footer> 
-
-    <div class="showbooks">
-        
-    </div>
-
-    <!-- <script type="module">
-        import { getDatabase, ref, set ,push } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-
-        const firebaseConfig = {
-          apiKey: "AIzaSyDmzphXBbz7lqxlvmZnv7Rs7QgOD_uXGx8",
-          authDomain: "library-a6e4f.firebaseapp.com",
-          databaseURL: "https://library-a6e4f-default-rtdb.firebaseio.com",
-          projectId: "library-a6e4f",
-          storageBucket: "library-a6e4f.appspot.com",
-          messagingSenderId: "648666452613",
-          appId: "1:648666452613:web:dcf95e0192c9c8d2eb8fec",
-          measurementId: "G-WNNCTDW4RK"
-        };
-      
-        const app = initializeApp(firebaseConfig);
-        var database = getDatabase(app);
-        const analytics = getAnalytics(app);
-        
-
-        window.app = app;
-        window.database = database;
-        
-      </script> -->
       <script src="card.js"></script>
 </body>
 </html>
