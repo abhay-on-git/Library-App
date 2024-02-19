@@ -48,13 +48,14 @@ header h1{
 }
 
 main{
-    padding: 1vmax;
     position: relative;
+    padding-top: 8vmax;
     width: 100%;
     min-height: 100vh;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
+    overflow: hidden;
     background-color: rgb(240,238,241);
 }
 
@@ -90,7 +91,7 @@ main{
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
-    top: 13%;
+    top: 10%;
     font-size: 17px;
     font-weight:bolder;
     padding: 0.5rem;
@@ -134,7 +135,7 @@ footer{
 fieldset{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
@@ -194,8 +195,10 @@ input::placeholder{
 .card-container{
     width: 100%;
     min-height: 100vh;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 20px;
     gap:  20px;
     /* align-items: center; */
     /* justify-content: space-around; */
@@ -210,6 +213,7 @@ input::placeholder{
     justify-content: center;
     justify-content: space-evenly;
     font-size: 19px;
+    box-shadow: 2px 2px 4px black;
     background-color: rgb(94, 76, 104);
 }
 .input{
@@ -220,7 +224,7 @@ input::placeholder{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: azure;
 }
 .button {
     width: 225px;
@@ -231,9 +235,15 @@ input::placeholder{
     justify-content: center;
     padding: 20px;
     border: none;
-    background-color: aliceblue;
+    font-size: 1.4vmax;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: azures;
 }
-
+.button:hover{
+    background-color: tomato;
+    transition: all 0.3s ease;
+}
 /* .showCards #bookName{
      width: 95%;
      height:15%;

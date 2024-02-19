@@ -5,7 +5,7 @@ f.addEventListener("submit", (e) =>{
     e.preventDefault()
     const bookname = e.target.bookname.value
     const author = e.target.author.value
-    const pages = e.target.pages.value
+    const pages = e.target.pages.value < 0 ? alert("Enter a valid pages") : e.target.pages.value;
     const checkbox = e.target.checkbox.checked
     const bookData = {bookname,author, pages,checkbox}
 
@@ -16,6 +16,7 @@ f.addEventListener("submit", (e) =>{
 
     displayBooks(bookData)
     e.target.reset();
+    f.style.display = "none";
 
 })
 
