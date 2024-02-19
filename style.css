@@ -190,6 +190,16 @@ input::placeholder{
     font-size: 16px;
 }
 /* showCards > card Code */
+
+.card-container{
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    display: flex;
+    gap:  20px;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+}
 .showCards{
     display: flex;
     flex-direction: column;
@@ -202,7 +212,7 @@ input::placeholder{
     font-size: 19px;
     background-color: rgb(94, 76, 104);
 }
-.showCards .input{
+.input{
     width: 225px;
     height: 43px;
     border-radius: 10px;
@@ -212,6 +222,18 @@ input::placeholder{
     padding: 20px;
     background-color: aliceblue;
 }
+.button {
+    width: 225px;
+    height: 43px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+    background-color: aliceblue;
+}
+
 /* .showCards #bookName{
      width: 95%;
      height:15%;

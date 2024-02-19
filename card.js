@@ -1,6 +1,5 @@
 const f = document.querySelector("form");
-const showCards = document.querySelector(".showCards")
-const books = []
+const cardContainer = document.querySelector(".card-container");
 
 f.addEventListener("submit", (e) =>{
     e.preventDefault()
@@ -15,30 +14,44 @@ f.addEventListener("submit", (e) =>{
     }
 
 
-    books.push(bookData)
-    displayBooks(books)
+    displayBooks(bookData)
     e.target.reset();
 
 })
 
-function displayBooks(books){
-    books.map((b,i) => {
+function displayBooks(b){
 
-        document.getElementById("bookName").innerHTML = b.bookname;
-        document.getElementById("author").innerHTML = b.author;
-        document.getElementById("pages").innerHTML = b.pages;
-        document.getElementById("read").innerHTML = b.checkbox ? "Read" : "not Read";
-        return showCards
+        const card = document.createElement("div");
+        card.className = "showCards";
+
+        const bookName = document.createElement("div");
+        bookName.className = "input";
+        bookName.textContent = b.bookname;
+
+        const author = document.createElement("div");
+        author.className = "input";
+        author.textContent = b.author;
+
+        const pages = document.createElement("div");
+        pages.className = "input";
+        pages.textContent = b.pages;
+
+        const read = document.createElement("div");
+        read.className = "input";
+        read.textContent = b.checkbox ? 'Read' : 'Not Read';
         
-        // return `<div>
-        // <h1>${b.bookname}</h1>
-        // <p>${b.author}</p>
-        // <p>${b.pages}</p>
-        // <p>${b.checkbox ? "Read" : "not read"}</p>
-        // </div>`
-    })
-    console.log(books)
-    
-}
+        const removeBtn = document.createElement('button');
+        removeBtn.className = "button";
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = ()=>{
+            cardContainer.removeChild(card);
+        };
 
-// displayBooks(books)
+        card.appendChild(bookName);
+        card.appendChild(author);
+        card.appendChild(pages);
+        card.appendChild(read);
+        card.appendChild(removeBtn);
+        cardContainer.appendChild(card);
+
+}
